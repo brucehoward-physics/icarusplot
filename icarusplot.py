@@ -29,6 +29,26 @@ def useGrayscale():
 #######################
 ## Plot labeling
 
+def ICARUSMCWip(_axis,_locRight=False):
+    _yrange = _axis.get_ylim()
+    _use_y = _yrange[1] + 0.025*(_yrange[1] - _yrange[0])
+    _xrange = _axis.get_xlim()
+    if _locRight==True:
+        _use_x = _xrange[1] - 0.025*(_xrange[1] - _xrange[0])
+        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Work In Progress', fontsize=14, color='blue', horizontalalignment='right' )
+    _use_x = _xrange[0] + 0.025*(_xrange[1] - _xrange[0])
+    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Work In Progress', fontsize=14, color='blue' )
+
+def ICARUSDataWip(_axis,_locRight=False):
+    _yrange = _axis.get_ylim()
+    _use_y = _yrange[1] + 0.025*(_yrange[1] - _yrange[0])
+    _xrange = _axis.get_xlim()
+    if _locRight==True:
+        _use_x = _xrange[1] - 0.025*(_xrange[1] - _xrange[0])
+        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Work In Progress', fontsize=14, color='#d67a11', horizontalalignment='right' )
+    _use_x = _xrange[0] + 0.025*(_xrange[1] - _xrange[0])
+    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Work In Progress', fontsize=14, color='#d67a11' )
+
 def ICARUSMCPreliminary(_axis,_locRight=False):
     _yrange = _axis.get_ylim()
     _use_y = _yrange[1] + 0.025*(_yrange[1] - _yrange[0])
@@ -78,8 +98,54 @@ def POT(_axis,_pot):
     return _axis.text( x=_use_x, y=_use_y, s='{:0.2}'.format(_use_pot)+r'$\times 10^{20}$'+' POT',\
                        fontsize=13, color='black', horizontalalignment='right' )
 
-def Preliminary(_axis,_loc='upper left'):
-    if _loc!='upper left' and _loc!='upper right' and _loc!='upper middle' and _loc!='lower middle':
+def WorkInProgress(_axis,_loc='upper left',_size=20):
+    if _loc!='upper left' and _loc!='upper right' and _loc!='upper middle' and _loc!='lower middle' and _loc!='lower left' and _loc!='lower right':
+        print('Invalid location for W.I.P. tag given. Choose upper left, upper right, upper middle, or lower middle.')
+    elif _loc=='upper left':
+        _yrange = _axis.get_ylim()
+        _use_y = _yrange[1] - 0.5*(_yrange[1] - _yrange[0])
+        _xrange = _axis.get_xlim()
+        _use_x = _xrange[0] + 0.05*(_xrange[1] - _xrange[0])
+        return _axis.text(s='WORK IN PROGRESS',x=_use_x,y=_use_y,color='gray',weight='bold',
+                          fontsize=_size,alpha=0.6,rotation=40.)
+    elif _loc=='upper right':
+        _yrange = _axis.get_ylim()
+        _use_y = _yrange[1] - 0.5*(_yrange[1] - _yrange[0])
+        _xrange = _axis.get_xlim()
+        _use_x = _xrange[1] - 0.05*(_xrange[1] - _xrange[0])
+        return _axis.text(s='WORK IN PROGRESS',x=_use_x,y=_use_y,color='gray',weight='bold',
+                          fontsize=_size,alpha=0.6,rotation=-40.,horizontalalignment='right')
+    elif _loc=='upper middle':
+        _yrange = _axis.get_ylim()
+        _use_y = _yrange[1] - 0.1*(_yrange[1] - _yrange[0])
+        _xrange = _axis.get_xlim()
+        _use_x = _xrange[1] - 0.5*(_xrange[1] - _xrange[0])
+        return _axis.text(s='WORK IN PROGRESS',x=_use_x,y=_use_y,color='gray',weight='bold',
+                          fontsize=_size,alpha=0.6,horizontalalignment='center')
+    elif _loc=='lower left':
+        _yrange = _axis.get_ylim()
+        _use_y = _yrange[0] + 0.1*(_yrange[1] - _yrange[0])
+        _xrange = _axis.get_xlim()
+        _use_x = _xrange[0] + 0.05*(_xrange[1] - _xrange[0])
+        return _axis.text(s='WORK IN PROGRESS',x=_use_x,y=_use_y,color='gray',weight='bold',
+                          fontsize=_size,alpha=0.6)
+    elif _loc=='lower right':
+        _yrange = _axis.get_ylim()
+        _use_y = _yrange[0] + 0.1*(_yrange[1] - _yrange[0])
+        _xrange = _axis.get_xlim()
+        _use_x = _xrange[1] - 0.05*(_xrange[1] - _xrange[0])
+        return _axis.text(s='WORK IN PROGRESS',x=_use_x,y=_use_y,color='gray',weight='bold',
+                          fontsize=_size,alpha=0.6,horizontalalignment='right')
+    else:
+        _yrange = _axis.get_ylim()
+        _use_y = _yrange[0] + 0.1*(_yrange[1] - _yrange[0])
+        _xrange = _axis.get_xlim()
+        _use_x = _xrange[1] - 0.5*(_xrange[1] - _xrange[0])
+        return _axis.text(s='WORK IN PROGRESS',x=_use_x,y=_use_y,color='white',weight='bold',
+                          fontsize=_size,alpha=0.6,horizontalalignment='center')
+
+def Preliminary(_axis,_loc='upper left',_size=20):
+    if _loc!='upper left' and _loc!='upper right' and _loc!='upper middle' and _loc!='lower middle' and _loc!='lower left' and _loc!='lower right':
         print('Invalid location for PRELMINARY tag given. Choose upper left, upper right, upper middle, or lower middle.')
     elif _loc=='upper left':
         _yrange = _axis.get_ylim()
@@ -87,28 +153,42 @@ def Preliminary(_axis,_loc='upper left'):
         _xrange = _axis.get_xlim()
         _use_x = _xrange[0] + 0.05*(_xrange[1] - _xrange[0])
         return _axis.text(s='PRELIMINARY',x=_use_x,y=_use_y,color='gray',weight='bold',
-                          fontsize=20,alpha=0.6,rotation=40.)
+                          fontsize=_size,alpha=0.6,rotation=40.)
     elif _loc=='upper right':
         _yrange = _axis.get_ylim()
         _use_y = _yrange[1] - 0.5*(_yrange[1] - _yrange[0])
         _xrange = _axis.get_xlim()
         _use_x = _xrange[1] - 0.05*(_xrange[1] - _xrange[0])
         return _axis.text(s='PRELIMINARY',x=_use_x,y=_use_y,color='gray',weight='bold',
-                          fontsize=20,alpha=0.6,rotation=-40.,horizontalalignment='right')
+                          fontsize=_size,alpha=0.6,rotation=-40.,horizontalalignment='right')
     elif _loc=='upper middle':
         _yrange = _axis.get_ylim()
         _use_y = _yrange[1] - 0.1*(_yrange[1] - _yrange[0])
         _xrange = _axis.get_xlim()
         _use_x = _xrange[1] - 0.5*(_xrange[1] - _xrange[0])
         return _axis.text(s='PRELIMINARY',x=_use_x,y=_use_y,color='gray',weight='bold',
-                          fontsize=20,alpha=0.6,horizontalalignment='center')
+                          fontsize=_size,alpha=0.6,horizontalalignment='center')
+    elif _loc=='lower left':
+        _yrange = _axis.get_ylim()
+        _use_y = _yrange[1] - 0.1*(_yrange[1] - _yrange[0])
+        _xrange = _axis.get_xlim()
+        _use_x = _xrange[0] + 0.05*(_xrange[1] - _xrange[0])
+        return _axis.text(s='WORK IN PROGRESS',x=_use_x,y=_use_y,color='gray',weight='bold',
+                          fontsize=_size,alpha=0.6)
+    elif _loc=='lower right':
+        _yrange = _axis.get_ylim()
+        _use_y = _yrange[1] - 0.1*(_yrange[1] - _yrange[0])
+        _xrange = _axis.get_xlim()
+        _use_x = _xrange[1] - 0.05*(_xrange[1] - _xrange[0])
+        return _axis.text(s='WORK IN PROGRESS',x=_use_x,y=_use_y,color='gray',weight='bold',
+                          fontsize=_size,alpha=0.6,horizontalalignment='right')
     else:
         _yrange = _axis.get_ylim()
         _use_y = _yrange[0] + 0.1*(_yrange[1] - _yrange[0])
         _xrange = _axis.get_xlim()
         _use_x = _xrange[1] - 0.5*(_xrange[1] - _xrange[0])
         return _axis.text(s='PRELIMINARY',x=_use_x,y=_use_y,color='white',weight='bold',
-                          fontsize=20,alpha=0.6,horizontalalignment='center')
+                          fontsize=_size,alpha=0.6,horizontalalignment='center')
 
 #######################
 ## Ratio canvas
