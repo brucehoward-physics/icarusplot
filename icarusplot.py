@@ -29,74 +29,74 @@ def useGrayscale():
 #######################
 ## Plot labeling
 
-def ICARUSMCWip(_axis,_locRight=False):
+def ICARUSMCWip(_axis,_locRight=False,_size=14):
     _yrange = _axis.get_ylim()
     _use_y = _yrange[1] + 0.025*(_yrange[1] - _yrange[0])
     _xrange = _axis.get_xlim()
     if _locRight==True:
         _use_x = _xrange[1] - 0.025*(_xrange[1] - _xrange[0])
-        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Work In Progress', fontsize=14, color='blue', horizontalalignment='right' )
+        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Work In Progress', fontsize=_size, color='blue', horizontalalignment='right' )
     _use_x = _xrange[0] + 0.025*(_xrange[1] - _xrange[0])
-    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Work In Progress', fontsize=14, color='blue' )
+    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Work In Progress', fontsize=_size, color='blue' )
 
-def ICARUSDataWip(_axis,_locRight=False):
+def ICARUSDataWip(_axis,_locRight=False,_size=14):
     _yrange = _axis.get_ylim()
     _use_y = _yrange[1] + 0.025*(_yrange[1] - _yrange[0])
     _xrange = _axis.get_xlim()
     if _locRight==True:
         _use_x = _xrange[1] - 0.025*(_xrange[1] - _xrange[0])
-        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Work In Progress', fontsize=14, color='#d67a11', horizontalalignment='right' )
+        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Work In Progress', fontsize=_size, color='#d67a11', horizontalalignment='right' )
     _use_x = _xrange[0] + 0.025*(_xrange[1] - _xrange[0])
-    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Work In Progress', fontsize=14, color='#d67a11' )
+    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Work In Progress', fontsize=_size, color='#d67a11' )
 
-def ICARUSMCPreliminary(_axis,_locRight=False):
+def ICARUSMCPreliminary(_axis,_locRight=False,_size=14):
     _yrange = _axis.get_ylim()
     _use_y = _yrange[1] + 0.025*(_yrange[1] - _yrange[0])
     _xrange = _axis.get_xlim()
     if _locRight==True:
         _use_x = _xrange[1] - 0.025*(_xrange[1] - _xrange[0])
-        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Preliminary', fontsize=14, color='blue', horizontalalignment='right' )
+        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Preliminary', fontsize=_size, color='blue', horizontalalignment='right' )
     _use_x = _xrange[0] + 0.025*(_xrange[1] - _xrange[0])
-    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Preliminary', fontsize=14, color='blue' )
+    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation Preliminary', fontsize=_size, color='blue' )
 
-def ICARUSDataPreliminary(_axis,_locRight=False):
+def ICARUSDataPreliminary(_axis,_locRight=False,_size=14):
     _yrange = _axis.get_ylim()
     _use_y = _yrange[1] + 0.025*(_yrange[1] - _yrange[0])
     _xrange = _axis.get_xlim()
     if _locRight==True:
         _use_x = _xrange[1] - 0.025*(_xrange[1] - _xrange[0])
-        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Preliminary', fontsize=14, color='#d67a11', horizontalalignment='right' )
+        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Preliminary', fontsize=_size, color='#d67a11', horizontalalignment='right' )
     _use_x = _xrange[0] + 0.025*(_xrange[1] - _xrange[0])
-    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Preliminary', fontsize=14, color='#d67a11' )
+    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data Preliminary', fontsize=_size, color='#d67a11' )
 
-def ICARUSMC(_axis,_locRight=False):
+def ICARUSMC(_axis,_locRight=False,_size=14):
     _yrange = _axis.get_ylim()
     _use_y = _yrange[1] + 0.025*(_yrange[1] - _yrange[0])
     _xrange = _axis.get_xlim()
     if _locRight==True:
         _use_x = _xrange[1] - 0.025*(_xrange[1] - _xrange[0])
-        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation', fontsize=14, color='blue', horizontalalignment='right' )
+        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation', fontsize=_size, color='blue', horizontalalignment='right' )
     _use_x = _xrange[0] + 0.025*(_xrange[1] - _xrange[0])
-    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation', fontsize=14, color='blue' )
+    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Simulation', fontsize=_size, color='blue' )
 
-def ICARUSData(_axis,_locRight=False):
+def ICARUSData(_axis,_locRight=False,_size=14):
     _yrange = _axis.get_ylim()
     _use_y = _yrange[1] + 0.025*(_yrange[1] - _yrange[0])
     _xrange = _axis.get_xlim()
     if _locRight==True:
         _use_x = _xrange[1] - 0.025*(_xrange[1] - _xrange[0])
-        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data', fontsize=14, color='#d67a11', horizontalalignment='right' )
+        return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data', fontsize=_size, color='#d67a11', horizontalalignment='right' )
     _use_x = _xrange[0] + 0.025*(_xrange[1] - _xrange[0])
-    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data', fontsize=14, color='#d67a11' )
+    return _axis.text( x=_use_x, y=_use_y, s=r'$\bf{ICARUS}$ Data', fontsize=_size, color='#d67a11' )
 
-def POT(_axis,_pot):
+def POT(_axis,_pot,_size=13):
     _yrange = _axis.get_ylim()
     _use_y = _yrange[1] + 0.02*(_yrange[1] - _yrange[0])
     _xrange = _axis.get_xlim()
     _use_x = _xrange[1] - 0.02*(_xrange[1] - _xrange[0])
     _use_pot = _pot/1.0e20
     return _axis.text( x=_use_x, y=_use_y, s='{:0.2}'.format(_use_pot)+r'$\times 10^{20}$'+' POT',\
-                       fontsize=13, color='black', horizontalalignment='right' )
+                       fontsize=_size, color='black', horizontalalignment='right' )
 
 def WorkInProgress(_axis,_loc='upper left',_size=20):
     if _loc!='upper left' and _loc!='upper right' and _loc!='upper middle' and _loc!='lower middle' and _loc!='lower left' and _loc!='lower right':
@@ -216,6 +216,7 @@ def UnityLine(_axis):
 
 #######################
 ## RECO VS TRUE: column-normalized, sylized plots
+## if given a relative norm as input, normalizes to an input number instead (?) 
 
 def makeColumnNormHist(_inH2D):
     _entries = _inH2D[0]
@@ -236,21 +237,80 @@ def makeColumnNormHist(_inH2D):
             _yentries.append(_ybins[j]+_halfDY[j])
     return _xentries, _yentries, _weights, _xbins, _ybins
 
-def RecoVTrue(_axis, _inNPH2D, _xlabel='', _ylabel=''):
-    _xvals, _yvals, _weights, _xbins, _ybins = makeColumnNormHist(_inNPH2D)
+def makeColumnTotNormHist(_inH2D,_inputNorm):
+    _entries = _inH2D[0]
+    _xbins = _inH2D[1]
+    _ybins = _inH2D[2]
+    _halfDX = np.array([ (_xbins[i+1]-_xbins[i])/2. for i in range(len(_xbins)-1) ])
+    _halfDY = np.array([ (_ybins[i+1]-_ybins[i])/2. for i in range(len(_ybins)-1) ])
+    _xentries = []
+    _yentries = []
+    _weights = []
+    for i in range(len(_xbins)-1):
+        wts = _entries[i]/np.sum(_inputNorm[i])
+        for j in range(len(wts)):
+            _weights.append(wts[j])
+    for i in range(len(_xbins)-1):
+        for j in range(len(_ybins)-1):
+            _xentries.append(_xbins[i]+_halfDX[i])
+            _yentries.append(_ybins[j]+_halfDY[j])
+    return _xentries, _yentries, _weights, _xbins, _ybins
+
+def makeRelativeNormHist(_inH2D,_inputNorm):
+    _entries = _inH2D[0]
+    _xbins = _inH2D[1]
+    _ybins = _inH2D[2]
+    _halfDX = np.array([ (_xbins[i+1]-_xbins[i])/2. for i in range(len(_xbins)-1) ])
+    _halfDY = np.array([ (_ybins[i+1]-_ybins[i])/2. for i in range(len(_ybins)-1) ])
+    _xentries = []
+    _yentries = []
+    _weights = []
+    for i in range(len(_xbins)-1):
+        wts = _entries[i]/_inputNorm
+        for j in range(len(wts)):
+            _weights.append(wts[j])
+    for i in range(len(_xbins)-1):
+        for j in range(len(_ybins)-1):
+            _xentries.append(_xbins[i]+_halfDX[i])
+            _yentries.append(_ybins[j]+_halfDY[j])
+    return _xentries, _yentries, _weights, _xbins, _ybins
+
+def RecoVTrue(_axis, _inNPH2D, _xlabel='', _ylabel='', _inputNormTo=[], _boldLines=False, _xsize=-1., _ysize=-1., _zoomToLo=-1., _zoomToHi=-1., _zoomFont=-1. ):
+    if len(_inputNormTo) == 0:
+        _xvals, _yvals, _weights, _xbins, _ybins = makeColumnNormHist(_inNPH2D)
+    elif len(_inputNormTo) > 1:
+        _xvals, _yvals, _weights, _xbins, _ybins = makeColumnTotNormHist(_inNPH2D,_inputNormTo)
+    else:
+        _xvals, _yvals, _weights, _xbins, _ybins = makeRelativeNormHist(_inNPH2D,_inputNormTo[0])
 
     _cts, _xb, _yb, _im = _axis.hist2d( _xvals, _yvals, weights=_weights, bins=[_xbins,_ybins], cmap='Reds' )
-    _axis.set_xlabel(_xlabel)
-    _axis.set_ylabel(_ylabel)
+
+    if _xsize > 0.:
+        _axis.set_xlabel(_xlabel,fontsize=_xsize)
+    else:
+        _axis.set_xlabel(_xlabel)
+    if _ysize > 0.:
+        _axis.set_ylabel(_ylabel,fontsize=_ysize)
+    else:
+        _axis.set_ylabel(_ylabel)
 
     # Draw the lines...
     _x_arr = np.linspace(_xb[0],_xb[-1],1001)
     _y_arr = np.linspace(_yb[0],_yb[-1],1001)
 
     for i in range(len(_xb)):
-        _axis.plot(_xb[i]*np.ones(1001),_y_arr,color='black')
-    for i in range(len(_yb)):
-        _axis.plot(_x_arr,_yb[i]*np.ones(1001),color='black')
+        if _boldLines==True:
+            _axis.plot(_xb[i]*np.ones(1001),_y_arr,color='black',linewidth=4)
+            _axis.plot(_x_arr,_xb[i]*np.ones(1001),color='black',linewidth=4)
+        else:
+            _axis.plot(_xb[i]*np.ones(1001),_y_arr,color='black')
+    if _boldLines==False:
+        for i in range(len(_yb)):
+            _axis.plot(_x_arr,_yb[i]*np.ones(1001),color='black')
+
+    if _zoomToLo >= 0. and _zoomToHi >= 0.:
+        _axis.set_xlim(_zoomToLo,_zoomToHi)
+        _axis.set_ylim(_zoomToLo,_zoomToHi)
 
     # Write the numbers
     for idxX in range(len(_xb)-1):
@@ -266,6 +326,12 @@ def RecoVTrue(_axis, _inNPH2D, _xlabel='', _ylabel=''):
                 xtxt = _xb[idxX]+(0.4*(_xb[idxX+1]-_xb[idxX]))
             if (_yb[idxY+1]-_yb[idxY])/(_yb[-1]-_yb[0]) > 0.2:
                 ytxt = _yb[idxY]+(0.4*(_yb[idxY+1]-_yb[idxY]))
+            if _zoomToLo >= 0. and _zoomToHi >= 0. and (xtxt <= _zoomToLo or ytxt <= _zoomToLo or xtxt >= _zoomToHi or ytxt >= _zoomToHi):
+                continue
+            elif _zoomToLo >= 0. and _zoomToHi >= 0. and _zoomFont<0.:
+                theFontsize*=2
+            elif _zoomToLo >= 0. and _zoomToHi >= 0. and _zoomFont>=0.:
+                theFontsize*=_zoomFont
             if _cts[idxX][idxY] < 0.65*np.max(_cts):
                 _axis.text( x=xtxt, y=ytxt, s='{:.1%}'.format(_cts[idxX][idxY]), color='black', fontsize=theFontsize )
             else:
