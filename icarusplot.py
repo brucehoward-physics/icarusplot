@@ -130,9 +130,12 @@ def RatioCanvasWithSideband():
     axs[1][1].set_ylim(0.65,1.35)
     return fig, axs
 
-def UnityLine(_axis):
+def UnityLine(_axis,_color=''):
     _xrange = _axis.get_xlim()
-    return _axis.plot(np.linspace(_xrange[0],_xrange[1],1001),np.ones(1001),'--',color='gray')
+    if _color=='':
+        return _axis.plot(np.linspace(_xrange[0],_xrange[1],1001),np.ones(1001),'--',color='gray')
+    else:
+        return _axis.plot(np.linspace(_xrange[0],_xrange[1],1001),np.ones(1001),'--',color=_color)
 
 #######################
 ## RECO VS TRUE: column-normalized, sylized plots
